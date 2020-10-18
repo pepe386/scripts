@@ -1,0 +1,6 @@
+# Do not ignore
+!/.gitignore
+
+# Ignored Files
+pi/.env
+pi/test.sh
