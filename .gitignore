@@ -4,3 +4,4 @@
 # Ignored Files
 pi/.env
 pi/test.sh
+pi/*.log
