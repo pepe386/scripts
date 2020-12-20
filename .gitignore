@@ -5,3 +5,4 @@
 pi/.env
 pi/test.sh
 pi/*.log
+proxy/.env
