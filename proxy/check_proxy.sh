@@ -29,7 +29,7 @@ then
 else
     #echo "Nothing listening on port 80..."
     #restart socat proxy
-    nohup socat TCP4-LISTEN:80,fork,su=nobody TCP6:[2806:2f0:4041:b557:c8b2:24f1:f7a3:cf47]:80 > /dev/null 2>&1 &
+    nohup socat TCP4-LISTEN:80,fork,su=nobody TCP6:[$zm_ipv6_new]:80 > /dev/null 2>&1 &
 fi
 
 if nc -zv 127.0.0.1 443 &> /dev/null
@@ -38,5 +38,5 @@ then
 else
     #echo "Nothing listening on port 443..."
     #restart socat proxy
-    nohup socat TCP4-LISTEN:443,fork,su=nobody TCP6:[2806:2f0:4041:b557:c8b2:24f1:f7a3:cf47]:443 > /dev/null 2>&1 &
+    nohup socat TCP4-LISTEN:443,fork,su=nobody TCP6:[$zm_ipv6_new]:443 > /dev/null 2>&1 &
 fi
